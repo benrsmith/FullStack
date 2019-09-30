@@ -1,0 +1,102 @@
+
+/* this is the css file, commit test. */
+
+.about{
+	padding-bottom:20px;
+
+}
+
+.errors{
+	color:#bb0000;
+	text-align:center;
+	width: 250px;
+	height: 30px;
+
+}
+.loginButton{
+	width: 250px;
+	height: 30px;
+}
+
+.quizInput{
+	width: 100px;
+	height: 30px;
+}
+
+.quizButton{
+	width: 75px;
+	height: 30px;
+
+}
+
+input{
+	background: transparent;
+	border: 1px solid black;
+	border-radius: 2px;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 10px;
+	margin-top: 10px;
+	margin-left: 10px;
+	vertical-align: middle;
+}
+
+input[type="button"]:hover{ 
+
+	background-color:rgb(132, 0, 19);
+
+}
+
+body {
+	background: #f4f4f4;
+  }
+
+.topbar {
+  position: absolute;
+  overflow: visible;
+  top: 12px;
+  right: 0px;
+  border-bottom: 1px solid #ccc;
+}
+
+
+#menu {
+	top:5%;
+	position:absolute; /* do i need */
+	left:50%;
+
+}
+
+
+.title {
+	font-size: 60px;
+	margin-bottom: 0.4em;
+	font-weight: bold;
+	color: #666;
+  }
+
+#cvs{
+
+	margin:auto;
+	width:50%;
+
+}
+
+#cvs{
+	margin-top:50px;
+
+}
+
+canvas {
+	border: solid 5px black;
+	background:grey;
+	position: absolute;
+	/*left: 50%;*/
+	/*transform: translate(-50%, -50%);*/
+
+}
+html, body {
+	margin: 0;
+	padding: 0;
+}

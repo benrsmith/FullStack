@@ -1,0 +1,139 @@
+<html>
+
+
+<!-------------------H E A D---------------------------->
+<head>
+
+<base href = "./">
+<meta charset = "utf-8">
+
+
+<meta http-equiv = "X-UA-Compatible" content "chrome=1">
+
+
+<meta name = "description" content = "Coursework">
+
+
+<link rel = "stylesheet" href = "cw.css">
+
+<title> coursework </title>
+</head>
+
+<!--------------------B O D Y----------------------->
+<body>
+
+
+<div id = "loginContainer">
+    <div id ="login">
+        <input visibility = "inherit" class = "loginButton" id = "loginName" type="text" name="username" autocomplete = "off" placeholder = "Username"><br>
+        <input visibility = "inherit" class = "loginButton" id = "loginPass" type="password" name="password" autocomplete = "off" placeholder = "Password"><br>
+        <input visibility = "inherit" class = "loginButton" type="button" value="Login" onclick="server.login();">
+        <input id = "logoutButton" type="button" value="Logout" onclick="loggedOut();" style= "visibility:hidden">
+    </div>
+
+
+    <p id = "loginError" class = "errors" style = "display:none"></p>
+    <p id = "loggedIn" class = "errors" style = "display:none">You are now logged in </p>
+
+
+</div>
+
+<div id = "hiscores">
+    <input id = "hiscoreButton" type="button" value="Display Hiscores" onclick="server.classHiscores();">
+
+    <table id = "hiscoreTable">
+      <tr id = "headingsRow" style = "display:none">
+        <th>Student name</th>
+        <th>Student score</th>
+      </tr>
+      <tr id = "teacherHeadingsRow"style = "display:none">
+        <th>Student ID</th>
+        <th>Student full name</th>
+        <th>Last login</th>
+        <th>Score</th>
+        <!--st.student_id,st.full_name,st.last_login, s.score-->
+      </tr>
+    </table>
+</div>
+
+
+<div id = "statistics">
+  <input id = "hiscoreButton" type="button" value="Display Statistics" onclick="server.statistics();">
+
+  <table id = "statisticsTable">
+    <tr id = "statsHeadingsRow" style = "display:none">
+      <th>Number of students</th>
+      <th>Maximum score</th>
+      <th>Average score</th>
+    </tr>
+
+
+    </tr>
+  </table>
+</div>
+
+
+<div id = "manageClass" style = "display:none">
+    <p>Manage classes</p>
+    <div id = "classes">
+    </div>
+    <div id = "queries">
+      <input class = "loginButton" id = "registerName" type="text" name="username" autocomplete = "off" placeholder = "Username"><br>
+      <input class = "loginButton" id = "registerPass" type="password" name="password" autocomplete = "off" placeholder = "Password"><br>
+      <input class = "loginButton" id = "registerfullName" type="text" name="fullName" autocomplete = "off" placeholder = "Full Name"><br>
+      <input id="addUser" type="button" class = "loginButton" value="Add user" onclick="server.addUser()" /> <br>
+      <p id = "registerFeedback" style = "display:none"></p>
+    </div>
+
+</div>
+
+
+<div id = "cvs" style = "position:relative;width:700px;height:630px">
+
+  <div>
+    <canvas id="ctx" width = "700" height = "520"> </canvas>
+  </div>
+
+  <!--border-bottom:solid 2px black;border-right:solid 2px black;    visibility inherit takes parent class visibility-->
+  <form id = "vars" style = "display:none;position:absolute;left:5px;top:5px;width:auto;padding-right:5px;border-bottom:solid 2px black;border-right:solid 2px black;">
+      Velocity X (1dp)<input visibility = "inherit" class = "quizInput" type="text" name="vx" value = "0"><br>
+      Velocity Y (1dp)<input visibility = "inherit" class = "quizInput" type="text" name="vy" value = "0"><br>
+      <input id="test" type="button" class = "quizButton" value="Submit" style = "position:absolute;left:30%;bottom:2px;" onclick="world.testAnswers();" /> <br>
+      <p id = "nextQuestion" style = "display:none"> Next Question </p>
+      <p id = "questionAnswer" style = "display:none;position:absolute;right:5px;bottom:5px;"></p>
+  </form>
+
+  <div id = "solutions" style = "display:none;position:absolute;left:5px;bottom:20px;width:auto;padding-right:5px;">
+      <p></p>
+  </div>
+
+
+  <div id = "menu" style = "position:absolute;left:40%;top:100px;height:300px;">
+    <input type="button" value="Start quiz" onclick="generateQuestions();">
+    <form id = "menuOptions" style = "position:absolute;left:50%;top:50%;width:auto;">
+        <p>Select topics</p>
+        <input type="checkbox" id="topic1" value="projectileMotion">Projectile Motion<br>
+        <input type="checkbox" id="topic2" value="3dVectors">3d Vectors<br>
+        <input type="checkbox" id="topic3" value="topic3" checked>Topic 3<br>
+
+  </div>
+
+
+
+</div>
+
+
+<script src = "./login.js"></script>
+<script src = "./engine.js"></script>
+<script src = "./engineServer.js"></script>
+<div class="topbar outer">
+
+</div>
+
+
+
+
+</body>
+<!--------------------E N D-------------------------->
+
+</html>
