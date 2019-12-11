@@ -111,7 +111,6 @@ quizOver = function(score){
 	document.getElementById("test").style.display = "none"
 	document.getElementById("menu").style.display = "block"
 	document.getElementById("solutions").style.display = "none"
-	console.log('its over but you have to do that query stuff AND FINISH WRITE UP BY 11:30 ITS 8:30 3 HOURS')
 	server.updateScore();
 }
 
